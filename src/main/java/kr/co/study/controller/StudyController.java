@@ -11,7 +11,7 @@ public class StudyController {
 	
 	@GetMapping
 	public String main() {
-		return "HI";
+		return "HI"; 
 	}
 	
 }
