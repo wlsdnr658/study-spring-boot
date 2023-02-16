@@ -14,4 +14,9 @@ public class StudyController {
 		return "HI"; 
 	}
 	
+	@GetMapping(value = "/test")
+	public String test() {
+		return "TEST"; 
+	}
+	
 }
