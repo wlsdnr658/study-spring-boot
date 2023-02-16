@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/study")
 public class StudyController {
 	
-	@GetMapping(value = "/github-webhook")
+	@GetMapping(value = "")
 	public String main() {
 		return "HI"; 
 	}
