@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping(value = "/study")
+@RequestMapping(value = "/study") 
 public class StudyController {
 	
 	@GetMapping(value = "")
