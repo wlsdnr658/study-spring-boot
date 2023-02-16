@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/study")
+@RequestMapping(value = "/study")
 public class StudyController {
 	
-	@GetMapping
+	@GetMapping(value = "/github-webhook")
 	public String main() {
 		return "HI"; 
 	}

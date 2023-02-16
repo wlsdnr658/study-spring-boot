@@ -1,0 +1,48 @@
+app:
+  name: study-spring-boot
+
+server:
+  port: 9090
+  session:
+    timeout: 12
+  compression:
+     enabled: true
+     mime-types: application/json,application/xml,text/html,text/xml,text/plain    
+  tomcat:
+    uri-encoding: UTF-8
+    max-http-form-post-size: 200MB
+    max-swallow-size: 200MB 
+  servlet:      
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true      
+    jsp:
+      init-parameters:
+        development: true
+              
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  devtools:
+    livereload:
+      enabled: true
+  web:
+    resources:
+      static-locations: file:./src/main/webapp/WEB-INF/resources
+  datasource:
+    hikari:
+      driver-class-name: "org.mariadb.jdbc.Driver"
+      jdbc-url: "jdbc:mariadb://tbizbooks.newzensolution.co.kr:3408/bizbooks?allowMultiQueries=true&characterEncoding=utf-8"
+      username: "newzen"
+      password: "!@#bizdbsbwps09##"
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      location: ${java.io.tmpdir}
+  
+logging:
+  config: classpath:config/logback.xml
