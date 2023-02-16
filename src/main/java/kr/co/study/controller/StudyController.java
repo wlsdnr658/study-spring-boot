@@ -17,6 +17,6 @@ public class StudyController {
 	@GetMapping(value = "/test")
 	public String test() {
 		return "TEST"; 
-	}
+	} 
 	
 }
